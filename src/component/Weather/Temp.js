@@ -7,8 +7,8 @@ const Temp = () => {
     const [tempInfo, setTempInfo] = useState({});
 
     const getWeatherInfo = async () => {
+        // try and catch 
         try {
-
             let url = `https://api.openweathermap.org/data/2.5/weather?q=${searchValue}&units=metric&appid=79b6d49b921085502b97631f28b77bde`;
 
             let res = await fetch(url);
@@ -30,13 +30,11 @@ const Temp = () => {
                 country,
                 sunset,
             };
-
             setTempInfo(myNewWeatherInfo);
         } catch (error) {
             console.log(error);
         }
     };
-
     useEffect(() => {
         getWeatherInfo();
     }, []);
@@ -45,19 +43,11 @@ const Temp = () => {
         <>
             <div className="wrap">
                 <div className="search">
-                    <input
-                        type="search"
-                        placeholder="search..."
-                        autoFocus
-                        id="search"
-                        className="searchTerm"
+                    <input type="search" placeholder="search..." id="search" className="searchTerm"
                         value={searchValue}
-                        onChange={(e) => setSearchValue(e.target.value)}
-                    />
+                        onChange={(e) => setSearchValue(e.target.value)} />
 
-                    <button
-                        className="searchButton"
-                        type="button"
+                    <button className="searchButton" type="button"
                         onClick={getWeatherInfo}>
                         Search
                     </button>

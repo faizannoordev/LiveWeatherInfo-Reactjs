@@ -7,6 +7,9 @@
   padding: 0;
   box-sizing: border-box;
 }
+html{
+  font-size: 10px;
+}
 
 :root {
   --rad: 0.7rem;
@@ -31,25 +34,25 @@ body {
 
 .widget {
   display: flex;
-  height: 400px;
-  width: 650px;
+  height: 40rem;
+  width: 65rem;
   flex-wrap: wrap;
   cursor: pointer;
-  border-radius: 20px;
-  box-shadow: 0 27px 55px 0 rgba(0, 0, 0, 0.3),
-    0 17px 17px 0 rgba(0, 0, 0, 0.15);
+  border-radius: 2rem;
+  box-shadow: 0 27rem 55rem 0 rgba(0, 0, 0, 0.3),
+    0 1.7rem 17rem 0 rgba(0, 0, 0, 0.15);
 }
 .widget .weatherIcon {
   flex: 1 100%;
   height: 50%;
-  border-top-left-radius: 20px;
-  border-top-right-radius: 20px;
+  border-top-left-radius: 2rem;
+  border-top-right-radius: 2rem;
   background: #fafafa;
   font-family: weathericons;
   display: flex;
   align-items: center;
   justify-content: space-around;
-  font-size: 100px;
+  font-size: 10rem;
 }
 
 .widget .weatherInfo {
@@ -63,10 +66,10 @@ body {
 .widget .weatherInfo .temperature {
   flex: 0 0 40%;
   width: 100%;
-  font-size: 65px;
+  font-size: 6.5rem;
   display: flex;
   justify-content: space-around;
-  margin-right: 20px;
+  margin-right: 2rem;
 }
 .widget .weatherInfo .description {
   flex: 0 60%;
@@ -78,11 +81,11 @@ body {
 }
 .widget .weatherInfo .description .weatherCondition {
   text-transform: uppercase;
-  font-size: 35px;
+  font-size: 3.5rem;
   font-weight: 100;
 }
 .widget .weatherInfo .description .place {
-  font-size: 15px;
+  font-size: 1.5rem;
 }
 .widget .date {
   flex: 0 0 30%;
@@ -92,7 +95,7 @@ body {
   justify-content: space-around;
   align-items: center;
   color: white;
-  font-size: 30px;
+  font-size: 3rem;
   font-weight: 800;
   text-align: center;
 }
@@ -100,20 +103,19 @@ body {
 .widget .extra-temp {
   flex: 1 100%;
   padding: 5% 0;
-  border-bottom-left-radius: 20px;
-  border-bottom-right-radius: 20px;
+  border-bottom-left-radius: 2rem;
+  border-bottom-right-radius: 2rem;
   background: #fafafa;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   align-items: center;
-  font-size: 100px;
+  font-size: 10rem;
 }
 
 .widget .extra-temp p {
-  font-size: 25px;
+  font-size: 2.5rem;
   font-weight: 600;
 }
-
 .temp-info-minmax,
 .weather-extra-info,
 .two-sided-section {
@@ -130,7 +132,7 @@ body {
   font-weight: 600;
   text-transform: capitalize;
   color: #080705;
-  font-size: 15px;
+  font-size: 1.5rem;
 }
 
 /* input search button style  */
@@ -144,13 +146,13 @@ body {
 
 .searchTerm {
   width: 50%;
-  /* border: 3px solid #00b4cc; */
+  /* border: 3rem solid #00b4cc; */
   border: none;
-  padding: 16px;
-  height: 20px;
-  border-radius: 5px 0 0 5px;
+  padding: 1.6rem;
+  height: 2rem;
+  border-radius: .5rem 0 0 .5rem;
   outline: none;
-  font-size: 18px;
+  font-size: 1.8rem;
 }
 
 .searchTerm:focus {
@@ -158,17 +160,17 @@ body {
 }
 
 .searchButton {
-  width: 80px;
-  height: 32px;
+  width: 8rem;
+  height: 3.2rem;
   border: none;
   background: #048b9c;
   text-align: center;
   color: #fff;
-  border-radius: 0 5px 5px 0;
+  border-radius: 0 .5rem .5rem 0;
   cursor: pointer;
-  font-size: 20px;
+  font-size: 2rem;
   outline: none;
-  font-size: 16px;
+  font-size: 1.6rem;
 }
 
 .searchButton:hover {
@@ -179,10 +181,19 @@ body {
   display: flex;
   justify-content: center;
   text-align: center;
-  margin-top: -150px;
-  margin-bottom: 50px;
+  margin-top: -15rem;
+  margin-bottom: 5rem;
 }
-
+@media (max-width:998px){
+  html{
+    font-size: 55%;
+  }
+}
+@media (max-width: 768px){
+  html{
+    font-size: 45%;
+  }
+}
 /*Resize the wrap to see the search bar change!*/
 /* .wrap {
   width: 30%;
